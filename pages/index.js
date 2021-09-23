@@ -2,6 +2,8 @@ import Head from 'next/head'
 import React,{Component} from 'react';
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import photo2021styles from '../styles/2021/Photo.module.css'
+
 
 class Home extends Component
 {
@@ -46,12 +48,26 @@ class Home extends Component
 						<div className={styles.cornerDiv}>
 							<div className={styles.cornerDivHeader}>
 								<div className={styles.cornerDivHeaderImg} />
-								<ul>
-									<li>首頁</li>
+								<ul className={styles.cornerDivHeaderNav} >
+									<li><a className={styles.blue} href="https://slsj.edu.hk/index.htm">首頁</a></li>
+									<li>-></li>
+									<li>班相</li>
 								</ul>
+							</div>
+							<div className={styles.cornerDivContent}>
+								<div className={photo2021styles.bg}>
+									
+								</div>
 							</div>
 						</div>
 					</div>
+					<footer className={styles.footer}>
+							<li className={styles.footerItem1}>石籬聖若望天主教小學</li>
+							<li className={styles.footerItem2}>地址：新界葵涌大白田街99號</li>
+							<li className={styles.footerItem3}>電話：3595 0036</li>
+							<li className={styles.footerItem4}>傳真：3595 0163</li>
+							<li className={styles.footerItem5}>電郵：slsj@slsj.edu.hk</li>
+					</footer>
 				</div>
 			</div>
 		  )

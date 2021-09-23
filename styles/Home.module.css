@@ -1,13 +1,13 @@
 .wrapper {
-  width:100vw;
-  height:100vh;
+  width:100%;
+  height:100%;
   text-align:center;
   margin: auto;
 }
 
 .container {
   width:1008px;
-  height:100vh;
+  height:100%;
   margin: auto;
   background-color:#ffdcb5;
   border:#ffc559 1px solid;
@@ -15,9 +15,9 @@
 
 .headLinkWrap
 {
-	height:20px;
+	height:25px;
 	text-align:right;
-	padding:0px 5px 0 0;
+	padding:0px 5px 5px 0;
 	color:#225594;
 }
 
@@ -79,7 +79,7 @@
 .movingWrapper p 
 {
 	//border:red 1px solid;
-	animation: marquee 10s linear infinite;
+	animation: marquee 20s linear infinite;
 	line-height:30px;
 	color:#fff;
 	font-family: 'Noto Sans TC', sans-serif;
@@ -116,7 +116,8 @@
 	height:35px;
 	width:100%;
 	//border:blue 1px solid;
-	
+	display: grid;
+	grid-template-columns: 32px 1fr;
 }
 
 .cornerDivHeaderImg
@@ -126,9 +127,94 @@
 	background-image: url("../public/images/2.png");
 	background-repeat: no-repeat;
 	background-size: 23px 17px;
-	margin:15px 0 0 10px;
+	margin:7px 0 0 10px;
+	//border:blue 1px solid;
+}
+ul.cornerDivHeaderNav
+{
+	//border:red 1px solid;
+	text-align:left;
+	line-height:35px;
+	padding-left:5px;
+	color:#ff6633;
+}
+ul.cornerDivHeaderNav .blue
+{
+	color:#225588;
 }
 
+ul.cornerDivHeaderNav li
+{
+	display:inline;
+	padding:0 3px;
+}
 
+.cornerDivContent
+{
+	background-color:#fff;
+	margin:0 3px 6px 3px;
+	text-align:left;
+}
+
+.footer
+{
+	height:70px;
+	line-height:68px;
+	//border:red 1px solid;
+	text-align:left;
+	padding:0 15px;
+	color:#336699;
+	font-size:12px;
+}
+
+.footer li
+{
+	display:inline-block;
+	margin-right:33px;
+}
+
+.footerItem1
+{
+	background-image: url("../public/images/footer/under.png");
+	background-repeat: no-repeat;
+	background-size: 33px 33px;
+	background-position-y: 15px;
+	padding:0 0 0 38px;
+}
+
+.footerItem2
+{
+	background-image: url("../public/images/footer/under2.png");
+	background-repeat: no-repeat;
+	background-size: 33px 33px;
+	background-position-y: 15px;
+	padding:0 0 0 38px;
+}
+.footerItem3
+{
+	background-image: url("../public/images/footer/under3.png");
+	background-repeat: no-repeat;
+	background-size: 33px 33px;
+	background-position-y: 15px;
+	padding:0 0 0 38px;
+}
+
+.footerItem4
+{
+	background-image: url("../public/images/footer/under4.png");
+	background-repeat: no-repeat;
+	background-size: 33px 33px;
+	background-position-y: 15px;
+	padding:0 0 0 38px;
+}
+
+.footerItem5
+{
+	background-image: url("../public/images/footer/under5.png");
+	background-repeat: no-repeat;
+	background-size: 33px 33px;
+	background-position-y: 15px;
+	padding:0 0 0 38px;
+}
 
 
