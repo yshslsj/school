@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import React,{Component} from 'react';
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-
+import styles from './layout.module.css'
 
 class Layout extends Component
 {

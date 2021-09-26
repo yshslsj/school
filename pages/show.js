@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React,{Component} from 'react';
 import Image from 'next/image'
 import Layout from '../components/layout'
-import styles from './index.module.css'
+import styles from './show.module.css'
 import homeStyles from '../styles/home.module.css'
 
 
@@ -35,9 +35,9 @@ class Home extends Component
 					</ul>
 				</div>
 				<div className={homeStyles.cornerDivContent}>
-					<div>
-						各班的班照已經可以預覽, 班照共有兩​張：正經版和Q版，請在下方選擇你的班別：
-					</div>​
+					<div className={styles.bg}>
+
+					</div>
 				</div>
 			</div>
     </Layout>
