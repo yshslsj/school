@@ -15,8 +15,8 @@
 
 .classbtn
 {
-  margin:0 0 10px 0;
-  font-size:23px;
+  margin:0 0 10px 0 !important;
+  font-size:23px !important;
 }
 
 .classbtn_space
