@@ -1,0 +1,27 @@
+.bg
+{
+	height:494px;
+	width:950px;
+	background-image: url("../../public/images/2021/bg.png");
+	background-repeat: no-repeat;
+}
+
+.classSelectBox
+{
+	width:100px !important;
+	float:right;
+	margin:10px 20px 0 0;
+}
+
+.classSelect
+{
+	background-color: #fff;
+	text-align: center;
+	font-size: 25px;
+	color:#ff571f;
+}
+
+.classSelectItem
+{
+	font-size: 16px;
+}
