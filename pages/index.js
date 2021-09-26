@@ -30,7 +30,7 @@ class Home extends Component
 					<div className={styles.cornerDivHeaderImg} />
 					<ul className={styles.cornerDivHeaderNav} >
 						<li><a className={styles.blue} href="https://slsj.edu.hk/index.htm">首頁</a></li>
-						<li>-></li>
+						<li>-&gt;</li>
 						<li>班相</li>
 					</ul>
 				</div>
