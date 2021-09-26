@@ -1,0 +1,17 @@
+.p_contentWrapper
+{
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size:16px;
+  padding:10px;
+}
+
+.classListWrapper
+{
+  font-size:20px;
+  padding:20px 0;
+}
+
+.classbtn
+{
+  margin:0 10px 10px 0;
+}
