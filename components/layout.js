@@ -25,7 +25,7 @@ class Layout extends Component
 					<meta name="description" content="石籬聖若望天主教小學" />
 					<link rel="icon" href="/favicon.ico" />
 					<link rel="preconnect" href="https://fonts.googleapis.com" />
-					<link rel="preconnect" href="https://fonts.gstatic.com"  />
+					<link rel="preconnect" href="https://fonts.gstatic.com"   />
 					<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400&display=swap" rel="stylesheet" />
 					<link
 					  rel="stylesheet"
