@@ -18,9 +18,13 @@ class Home extends Component
 {
 	constructor(props) {
 		super(props);
+        if(this.props.router.query) this.id = this.props.router.query.id;
+        else this.id = null;
+        
+        
         this.state = {
-        url1: "../images/photos/preview/"+this.props.router.query.id+"_正JPG.jpg",
-        url2: "../images/photos/preview/"+this.props.router.query.id+"_cuteJPG.jpg"
+        url1: "../images/photos/preview/"+this.id+"_正JPG.jpg",
+        url2: "../images/photos/preview/"+this.id+"_cuteJPG.jpg"
       }
 	}//end constructor
 
@@ -29,7 +33,7 @@ class Home extends Component
 	{
 			//this.id = this.props.router.query.id;
 			//alert(this.id);
-        
+            if(!this.id || this.id==null) window.location.href = "/";
 
 	}
 
@@ -48,7 +52,7 @@ class Home extends Component
 						<li>-&gt;</li>
 						<li><Link href="/">班相</Link></li>
                         <li>-&gt;</li>
-						<li>{this.props.router.query.id.toUpperCase()}</li>
+						<li>{this.id ? this.id.toUpperCase() : ""}</li>
 					</ul>
 				</div>
 				<div className={homeStyles.cornerDivContent}>
