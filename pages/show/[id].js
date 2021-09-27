@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import {Component} from 'react';
 import { withRouter } from 'next/router'
+import Router from "next/router";
 import Image from 'next/image'
 import Layout from '../../components/layout'
 import styles from './id.module.css'
@@ -27,14 +28,14 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import Slide from '@material-ui/core/Slide';
 import CloseIcon from '@material-ui/icons/Close';
-
+import queryString from 'query-string'
 
 class Home extends Component
 {
 	constructor(props) {
 		super(props);
         if(this.props.router.query) this.id = this.props.router.query.id;
-        else this.id = null;
+        else this.id = this.props.location.search;
         
         this.state = {
         url1: "../images/photos/preview/"+this.id+"_正JPG.jpg",
@@ -43,6 +44,7 @@ class Home extends Component
         fullurl2: "../images/photos/full/"+this.id+"_cute.jpg",
         diaOpen: false,
       }
+        
 	}//end constructor
 
 
@@ -62,7 +64,14 @@ class Home extends Component
         });
         alert(this.state.diaOpen);
     }
-
+    
+    selectOnChange(e)
+    {
+        
+        Router.push({
+    pathname: "/show/"+e.target.value
+})
+    }
 
 	render() {
 		  return (
@@ -116,6 +125,7 @@ class Home extends Component
 									id="class-select"
 									className={styles.classSelect}
 									value={this.props.router.query.id}
+                                    onChange={(e)=>{this.selectOnChange(e)}}
 								>
 									<MenuItem className={styles.classSelectItem} value={"1a"}>1A</MenuItem>
 									<MenuItem className={styles.classSelectItem} value={"1b"}>1B</MenuItem>
