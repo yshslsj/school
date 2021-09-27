@@ -12,7 +12,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-
+import Link from 'next/link'
 
 class Home extends Component
 {
@@ -23,8 +23,12 @@ class Home extends Component
 
 	componentDidMount(props, state)
 	{
-			this.id = this.props.router.query.id;
+			//this.id = this.props.router.query.id;
 			//alert(this.id);
+        this.state = {
+        url1: "abc"
+      }
+
 	}
 
 
@@ -40,17 +44,25 @@ class Home extends Component
 					<ul className={homeStyles.cornerDivHeaderNav} >
 						<li><a className={homeStyles.blue} href="https://slsj.edu.hk/index.htm">首頁</a></li>
 						<li>-&gt;</li>
-						<li>班相</li>
+						<li><Link href="/">班相</Link></li>
+                        <li>-&gt;</li>
+						<li>{this.props.router.query.id.toUpperCase()}</li>
 					</ul>
 				</div>
 				<div className={homeStyles.cornerDivContent}>
 					<div className={styles.bg}>
+                        <div className={styles.prevImgDiv1}>
+                            123
+                        </div>
+                        <div className={styles.prevImgDiv2}>
+                            123
+                        </div>
 						<Box sx={{ minWidth: 120 }} className={styles.classSelectBox}>
 							<FormControl fullWidth>
 								<Select
 									id="class-select"
 									className={styles.classSelect}
-									value={this.id}
+									value={this.props.router.query.id}
 								>
 									<MenuItem className={styles.classSelectItem} value={"1a"}>1A</MenuItem>
 									<MenuItem className={styles.classSelectItem} value={"1b"}>1B</MenuItem>
