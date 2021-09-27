@@ -18,6 +18,10 @@ class Home extends Component
 {
 	constructor(props) {
 		super(props);
+        this.state = {
+        url1: "../images/photos/preview/"+this.props.router.query.id+"_正JPG.jpg",
+        url2: "../images/photos/preview/"+this.props.router.query.id+"_cuteJPG.jpg"
+      }
 	}//end constructor
 
 
@@ -25,9 +29,7 @@ class Home extends Component
 	{
 			//this.id = this.props.router.query.id;
 			//alert(this.id);
-        this.state = {
-        url1: "abc"
-      }
+        
 
 	}
 
@@ -52,10 +54,10 @@ class Home extends Component
 				<div className={homeStyles.cornerDivContent}>
 					<div className={styles.bg}>
                         <div className={styles.prevImgDiv1}>
-                            123
+                            <img src={this.state.url1} />
                         </div>
                         <div className={styles.prevImgDiv2}>
-                            123
+                            <img src={this.state.url2} />
                         </div>
 						<Box sx={{ minWidth: 120 }} className={styles.classSelectBox}>
 							<FormControl fullWidth>

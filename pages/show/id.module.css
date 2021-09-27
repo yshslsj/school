@@ -26,14 +26,28 @@
 	font-size: 16px;
 }
 
-.prevImgDiv1
+
+.prevImgDiv1, .prevImgDiv2
 {
     position: absolute;
-    margin:141px 0 0 86px;
+    width:374px;
+    height:211px;
+    overflow: hidden;
+}
+
+.prevImgDiv1 img, .prevImgDiv2 img
+{
+    width:374px;
+}
+
+.prevImgDiv1
+{
+    
+    margin:140px 0 0 84px;
 }
 
 .prevImgDiv2
 {
-    position: absolute;
-    margin:206px 0 0 479px;
+    margin:206px 0 0 478px;
 }
+
