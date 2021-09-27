@@ -14,6 +14,21 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Link from 'next/link'
 
+
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItem from '@material-ui/core/ListItem';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import Slide from '@material-ui/core/Slide';
+import CloseIcon from '@material-ui/icons/Close';
+
+
 class Home extends Component
 {
 	constructor(props) {
@@ -21,10 +36,12 @@ class Home extends Component
         if(this.props.router.query) this.id = this.props.router.query.id;
         else this.id = null;
         
-        
         this.state = {
         url1: "../images/photos/preview/"+this.id+"_正JPG.jpg",
-        url2: "../images/photos/preview/"+this.id+"_cuteJPG.jpg"
+        url2: "../images/photos/preview/"+this.id+"_cuteJPG.jpg",
+        fullurl1: "../images/photos/full/"+this.id+"_正.jpg",
+        fullurl2: "../images/photos/full/"+this.id+"_cute.jpg",
+        diaOpen: false,
       }
 	}//end constructor
 
@@ -36,6 +53,15 @@ class Home extends Component
             if(!this.id || this.id==null) window.location.href = "/";
 
 	}
+    
+    image1onclick(e)
+    {
+        alert(this.state.diaOpen);
+        this.setState({
+          diaOpen: true
+        });
+        alert(this.state.diaOpen);
+    }
 
 
 	render() {
@@ -44,6 +70,27 @@ class Home extends Component
       <Head>
         <title>石籬聖若望天主教小學</title>
       </Head>
+                  
+                <Dialog fullScreen open={this.state.diaOpen}>
+                    <AppBar>
+                      <Toolbar>
+                        <IconButton edge="start" color="inherit" aria-label="close">
+                          <CloseIcon />
+                        </IconButton>
+                        <Typography variant="h6">
+                          班相
+                        </Typography>
+                      </Toolbar>
+                    </AppBar>
+                    <div className={styles.dialogContent}>
+                        <img src={this.state.fullurl1} />
+                    </div>
+                  </Dialog>  
+                  
+                  
+                  
+                  
+                  
 			<div className={homeStyles.cornerDiv}>
 				<div className={homeStyles.cornerDivHeader}>
 					<div className={homeStyles.cornerDivHeaderImg} />
@@ -57,7 +104,7 @@ class Home extends Component
 				</div>
 				<div className={homeStyles.cornerDivContent}>
 					<div className={styles.bg}>
-                        <div className={styles.prevImgDiv1}>
+                        <div className={styles.prevImgDiv1} onClick={(e)=>{this.image1onclick(e)}}>
                             <img src={this.state.url1} />
                         </div>
                         <div className={styles.prevImgDiv2}>

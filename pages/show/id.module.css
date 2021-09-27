@@ -38,6 +38,7 @@
 .prevImgDiv1 img, .prevImgDiv2 img
 {
     width:374px;
+    cursor: pointer;
 }
 
 .prevImgDiv1
@@ -51,3 +52,12 @@
     margin:206px 0 0 478px;
 }
 
+.dialogContent
+{
+    margin:70px 0 0 10px;
+}
+
+.dialogContent img
+{
+    width:100%;
+}
